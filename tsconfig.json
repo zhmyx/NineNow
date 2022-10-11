@@ -1,0 +1,19 @@
+// prettier-ignore
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",     /* Recommended React Native TSConfig base */
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["./src/features/components/*"],
+      "@navigators/*": ["./src/features/navigators/*"],
+      "@reducers/*": ["./src/reducers/*"],
+      "@utils/*": ["./src/utils/*"],
+      // "@types/*": ["./src/types/*"],
+      "@features/*": ["./src/features/*"]
+    },
+    "types": [
+      "@types/styled-components-react-native"
+    ]
+  }
+}
