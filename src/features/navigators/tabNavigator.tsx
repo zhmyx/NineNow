@@ -23,7 +23,15 @@ const tabBarSources = [
 
 function tabScreens() {
   return tabBarSources.map(({ name, component, icon }) => (
-    <Tab.Screen key={name} name={name} component={component} options={{ tabBarLabel: icon }} />
+    <Tab.Screen
+      key={name}
+      name={name}
+      component={component}
+      options={{
+        tabBarLabel: icon,
+        headerStyle: { backgroundColor: '#121518', shadowColor: 'transparent' },
+      }}
+    />
   ));
 }
 

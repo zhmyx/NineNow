@@ -6,7 +6,7 @@ type Props = {
   color: string;
 };
 
-const Icon: React.FC<Props> = ({ name, size, color }) => {
+export const Icon: React.FC<Props> = ({ name, size, color }) => {
   return <MaterialIcons name={name} color={color} size={size} />;
 };
 

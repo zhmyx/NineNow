@@ -31,6 +31,4 @@ export function CategoriesPage() {
       />
     </Container>
   );
-
-  // ListHeaderComponent={() => <ListHeader />}
 }
