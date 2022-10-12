@@ -16,26 +16,24 @@ import Icon from '../icon/icon';
 type Props = SectionItem;
 
 export function ShowSection({ id, type, title, items, allAction }: Props) {
-  // use type to decide the size of the cell item
-  console.log('type:', type);
-
   const { width, height } = getImageSize(type as SectionType);
+  const imageStyle = { width, height, borderRadius: 10, marginBottom: 5 };
   const allText = allAction.text;
 
-  const CardItem = ({ item }: { item: ShowItem }) => {
-    return (
-      <CardContainer width={width}>
-        <FastImage
-          style={{ width, height, borderRadius: 10, marginBottom: 5 }}
-          source={{ uri: item.imageUrl, priority: FastImage.priority.normal }}
-          resizeMode={FastImage.resizeMode.cover}
-        />
-        <Title numberOfLines={1} size={15}>
-          {item.name.toUpperCase()}
-        </Title>
-      </CardContainer>
-    );
-  };
+  const getItemLayout = (index: number) => ({ length: width, offset: (width + 10) * index, index });
+
+  const CardItem = ({ item }: { item: ShowItem }) => (
+    <CardContainer width={width}>
+      <FastImage
+        style={imageStyle}
+        source={{ uri: item.imageUrl, priority: FastImage.priority.normal }}
+        resizeMode={FastImage.resizeMode.cover}
+      />
+      <Title numberOfLines={1} size={15}>
+        {item.name.toUpperCase()}
+      </Title>
+    </CardContainer>
+  );
 
   const SectionHeader = () => (
     <HeaderContainer>
@@ -58,13 +56,13 @@ export function ShowSection({ id, type, title, items, allAction }: Props) {
         horizontal
         directionalLockEnabled
         showsHorizontalScrollIndicator={false}
-        initialNumToRender={5}
+        initialNumToRender={3}
         data={items}
         renderItem={CardItem}
-        getItemLayout={(_, index: number) => ({ length: width, offset: width, index })}
+        getItemLayout={(_, index: number) => getItemLayout(index)}
         ItemSeparatorComponent={() => <ListSeparator />}
         ListFooterComponent={() => <ListSeparator />}
-        keyExtractor={(item, index) => `${item.id}:${index}:${id}`}
+        keyExtractor={(item, index) => `${id}:${title}:${item.name}:${index}`}
       />
     </Container>
   );

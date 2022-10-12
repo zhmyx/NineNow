@@ -20,7 +20,7 @@ function formatItems(items: any): ShowItem[] {
   return items.map((item) => ({
     id: item.id,
     name: item.name,
-    imageUrl: item.genre?.image?.sizes.w480 ?? '',
+    imageUrl: item?.image?.sizes.w480 ?? '',
   }));
 }
 

@@ -4,28 +4,28 @@ import { SectionItem, useHomeData } from '../../../hooks/useHomeData';
 import { getImageSize, SectionType } from '../../../utils/getImageSize';
 
 export function HomePage() {
-  const { data, fetchData, isLoading } = useHomeData();
+  const { data } = useHomeData();
 
   const getItemLayout = (item: SectionItem, index: number) => {
     const { height } = getImageSize(item.type as SectionType);
     const cardHeight = height + 80;
-    return ({ length: cardHeight, offset: cardHeight, index });
+    return { length: cardHeight, offset: cardHeight * index, index };
   };
 
   return (
     <Container>
       <ListView
-        onRefresh={fetchData}
         directionalLockEnabled
         showsVerticalScrollIndicator={false}
-        initialNumToRender={5}
+        initialNumToRender={4}
         data={data}
-        refreshing={isLoading}
         ItemSeparatorComponent={() => <ListSeparator />}
         ListFooterComponent={() => <ListSeparator />}
         getItemLayout={getItemLayout}
-        keyExtractor={(item: SectionItem, index: number) => `${item.id}:${index}`}
-        renderItem={({ item, index }) => <ShowSection key={`${item.id}:${index}`} {...item} />}
+        keyExtractor={({ id, title }: SectionItem, index: number) => `${id}:${title}:${index}`}
+        renderItem={({ item, index }: { item: SectionItem; index: number }) => (
+          <ShowSection key={`${item.id}:${index}`} {...item} />
+        )}
       />
     </Container>
   );
