@@ -9,8 +9,8 @@ import {
   CardContainer,
   HeaderRightContainer,
 } from './styles';
-import { SectionItem, ShowItem } from '../../../hooks/useHomeData';
-import { getImageSize, SectionType } from '../../../utils/getImageSize';
+import { SectionItem, SectionType, ShowItem } from '../../../hooks/useHomeData';
+import { getImageSize } from '../../../utils/getImageSize';
 import Icon from '../icon/icon';
 
 type Props = SectionItem;
@@ -22,6 +22,8 @@ export function ShowSection({ id, type, title, items, allAction }: Props) {
 
   const getItemLayout = (index: number) => ({ length: width, offset: (width + 10) * index, index });
 
+  const isPostRail = type === SectionType.posterRail;
+
   const CardItem = ({ item }: { item: ShowItem }) => (
     <CardContainer width={width}>
       <FastImage
@@ -29,9 +31,11 @@ export function ShowSection({ id, type, title, items, allAction }: Props) {
         source={{ uri: item.imageUrl, priority: FastImage.priority.normal }}
         resizeMode={FastImage.resizeMode.cover}
       />
-      <Title numberOfLines={1} size={15}>
-        {item.name.toUpperCase()}
-      </Title>
+      {!isPostRail && (
+        <Title numberOfLines={1} size={15}>
+          {item.name.toUpperCase()}
+        </Title>
+      )}
     </CardContainer>
   );
 

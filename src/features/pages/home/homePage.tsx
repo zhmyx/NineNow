@@ -9,7 +9,7 @@ export function HomePage() {
   const getItemLayout = (item: SectionItem, index: number) => {
     const { height } = getImageSize(item.type as SectionType);
     const cardHeight = height + 80;
-    return { length: cardHeight, offset: cardHeight * index, index };
+    return { length: cardHeight, offset: (cardHeight + 10) * index, index };
   };
 
   return (

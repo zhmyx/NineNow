@@ -1,10 +1,6 @@
-export enum SectionType {
-  posterRail = 'posterRail',
-  rail = 'rail',
-  featuredRail = 'featured-rail',
-}
+import { SectionType } from '../hooks/useHomeData';
 
-export function getImageSize(type: SectionType): { width: number, height: number } {
+export function getImageSize(type: SectionType): { width: number; height: number } {
   if (type === SectionType.posterRail) {
     return { width: 170, height: 280 };
   }

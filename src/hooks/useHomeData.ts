@@ -2,6 +2,12 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { get } from '../utils/apiRequest';
 
+export enum SectionType {
+  posterRail = 'posterRail',
+  rail = 'rail',
+  featuredRail = 'featured-rail',
+}
+
 export type ShowItem = {
   id: string;
   name: string;
@@ -10,18 +16,20 @@ export type ShowItem = {
 
 export type SectionItem = {
   id: number;
-  type: string;
+  type: SectionType;
   title: string;
   allAction: { text: string };
   items: ShowItem[];
 };
 
 function formatItems(items: any): ShowItem[] {
-  return items.map((item) => ({
+  const list = items.map((item) => ({
     id: item.id,
     name: item.name,
     imageUrl: item?.image?.sizes.w480 ?? '',
   }));
+
+  return list.slice(0, Math.min(list.length, 10));
 }
 
 export function useHomeData() {
