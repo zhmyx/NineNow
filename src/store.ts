@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import CategoryReducer from './reducers/categorySlice';
+import CategoryReducer from './reducers/categoryReducer';
 
 // This creates a Redux store, and also automatically configure the Redux DevTools extension so that you can inspect the store while developing.
 
