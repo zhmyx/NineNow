@@ -31,8 +31,10 @@ This repo implements part of the `home` and `categories` page with real data.
 
 |Home|Categories|
 |-|-|
-|<img width="440" alt="Screen Shot 2022-10-12 at 6 03 10 PM" src="https://user-images.githubusercontent.com/60415254/195255341-eee629d8-20f7-429e-81e1-9ff5184ab284.png">|<img width="449" alt="Screen Shot 2022-10-12 at 6 02 56 PM" src="https://user-images.githubusercontent.com/60415254/195255350-4c52d70f-7c32-4527-9d00-59736e7ea0a6.png">|
+|<img width="443" alt="Screen Shot 2022-10-12 at 7 56 55 PM" src="https://user-images.githubusercontent.com/60415254/195272484-1fcf79f4-c14a-4a49-be5e-8d8c0f2c947b.png">|<img width="449" alt="Screen Shot 2022-10-12 at 6 02 56 PM" src="https://user-images.githubusercontent.com/60415254/195255350-4c52d70f-7c32-4527-9d00-59736e7ea0a6.png">|
+
 |Home-Video|Categories-Video|
-|https://user-images.githubusercontent.com/60415254/195254883-9d07a574-8215-48c4-849f-4ceb2dc3eda0.mp4|https://user-images.githubusercontent.com/60415254/195255083-67c4854f-0138-449a-aada-ba9704e738e0.mov|
+|-|-|
+|https://user-images.githubusercontent.com/60415254/195273910-924a93f7-1213-4a15-8545-9365d7a9528f.mov|https://user-images.githubusercontent.com/60415254/195255083-67c4854f-0138-449a-aada-ba9704e738e0.mov|
 
 
