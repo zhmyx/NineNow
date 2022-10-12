@@ -31,7 +31,7 @@ This repo implements part of the `home` and `categories` page with real data.
 
 |Home|Categories|
 |-|-|
-|![1](https://user-images.githubusercontent.com/60415254/195285573-1a1659ff-c871-449f-a080-b26e33fd01b1.png)|![2](https://user-images.githubusercontent.com/60415254/195285914-7131d582-d037-4fcd-be0e-df76c8bef905.png)|
+|![1](https://user-images.githubusercontent.com/60415254/195285573-1a1659ff-c871-449f-a080-b26e33fd01b1.png)|![2](https://user-images.githubusercontent.com/60415254/195288280-abea87e1-7421-4725-bbe2-c05975b6812d.png)|
 
 https://user-images.githubusercontent.com/60415254/195285289-e0f45121-8c04-4c09-8006-7d13730c5f47.mov
 
