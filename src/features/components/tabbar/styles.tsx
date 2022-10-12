@@ -18,6 +18,6 @@ export const Label = styled.Text<{
   isFocused: boolean;
 }>`
   font-weight: ${({ isFocused }) => (isFocused ? 600 : 500)};
-  color: ${({ isFocused }) => (isFocused ? 'white' : '#999EA1')};
+  color: ${({ isFocused }) => (isFocused ? '#DDE1E3' : '#999EA1')};
   font-size: 11px;
 `;
